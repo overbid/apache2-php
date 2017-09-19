@@ -1,0 +1,18 @@
+version: "2"
+services:
+    php:
+        build: "./php"
+        container_name: "php"
+        volumes:
+            - "./code:/usr/local/apache2/htdocs"
+            - "./php:/run"
+    apache2:
+        build: "./apache2"
+        container_name: "apache2"
+        volumes:
+            - "./code:/usr/local/apache2/htdocs"
+            - "./php:/run"
+        ports:
+            - 7080:80
+        links:
+            - php
