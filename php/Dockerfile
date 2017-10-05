@@ -9,3 +9,5 @@ RUN set -x \
 
 RUN docker-php-ext-install \
         sockets
+
+COPY ./zz-socket.conf /usr/local/etc/php-fpm.d/zz-socket.conf

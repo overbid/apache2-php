@@ -11,7 +11,7 @@ services:
         container_name: "apache2"
         volumes:
             - "./code:/usr/local/apache2/htdocs"
-            - "./php:/run"
+            - "./php/run:/run/php"
         ports:
             - 7080:80
         links:

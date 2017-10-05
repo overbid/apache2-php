@@ -8,4 +8,3 @@ RUN set -x \
         && chown -R core: /usr/local/apache2
 
 COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
-COPY ./www.conf /usr/local/etc/php-fpm.d/www.conf
